@@ -6,10 +6,10 @@ const MovimientoSchema= mongoose.Schema({
 //   // required: true,
 //   // default: Date.now()
 //  },
-//  inicio:{
-//   type: Number,
-//   // required: true,
-//  },
+ inicial:{
+  type: Number,
+  // required: true,
+ },
  final:{
   type: Number,
   required: true,
@@ -19,6 +19,21 @@ const MovimientoSchema= mongoose.Schema({
   required: true,
   trim: true
  },
+ origen:{
+    type: String,
+    required: true,
+    trim: true
+   },
+   destino:{
+    type: String,
+    required: true,
+    trim: true
+   },
+   chofer:{
+    type: String,
+    required: true,
+    trim: true
+   },  
  promedio:{
   type: Boolean,
   default: false
@@ -27,6 +42,7 @@ const MovimientoSchema= mongoose.Schema({
   type: Boolean,
   default: false
  },
+
  creado:{
   type:Date,
   default: Date.now()
