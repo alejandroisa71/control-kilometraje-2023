@@ -48,7 +48,7 @@ exports.obtenerMovimientos = async (req, res) => {
 
     //Obtener las tareas por vehiculo
     const movimientos = await Movimiento.find({ vehiculo }).sort({
-      creado: -1, 
+      final: -1, 
     });
     res.json({ movimientos }); 
   } catch (error) {
